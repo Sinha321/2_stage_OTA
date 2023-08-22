@@ -1,0 +1,27 @@
+LTSPICE NETLIST
+Vdd 1 0 dc 2.5V
+M1 2 4 6 0 nmos1
+M2 3 5 6 0 nmos2
+M3 2 2 1 1 pmos3
+M4 3 2 1 1 pmos4
+M5 6 8 7 7 nmos5
+M6 9 3 1 1 pmos6
+M7 9 8 7 7 nmos7
+M8 8 8 7 7 nmos8
+Vss 0 7 dc 2.5V
+Iref 1 8 dc 20uA
+Cc 3 9 3pf
+C1 9 0 10pf
+Vb1 4 10 dc 1V
+Vb2 5 11 dc 1V
+Vin1 10 0 sin(0 -50uV 1K)
+Vin2 11 0 sin(0 50uV 1K)
+.model nmos1 nmos(vto=0.7V lambda=0.04 kp=330u)
+.model nmos2 nmos(vto=0.7V lambda=0.04 kp=330u)
+.model pmos3 pmos(vto=-0.7V lambda=0.05 kp=750u)
+.model pmos4 pmos(vto=-0.7V lambda=0.05 kp=750u)
+.model nmos5 nmos(vto=0.7V lambda=0.04 kp=495u)
+.model pmos6 pmos(vto=-0.7V lambda=0.05 kp=4700u)
+.model nmos7 nmos(vto=0.7V lambda=0.04 kp=1540u)
+.model nmos8 nmos(vto=0.7V lambda=0.04 kp=495u)
+.tran 0.1ms 3ms 
