@@ -25,3 +25,4 @@ Vin2 11 0 sin(0 50uV 1K)
 .model nmos7 nmos(vto=0.7V lambda=0.04 kp=1540u)
 .model nmos8 nmos(vto=0.7V lambda=0.04 kp=495u)
 .tran 0.1ms 3ms 
+
