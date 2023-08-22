@@ -1,0 +1,3 @@
+.meas Vid PP V(11)-V(10)
+.meas Vout PP V(9)
+.meas Gain param Vout/Vid
